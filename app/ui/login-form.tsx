@@ -3,9 +3,11 @@ import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
+  ArrowLeftIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
+import Link from 'next/link';
 
 export default function LoginForm() {
   return (
@@ -56,6 +58,13 @@ export default function LoginForm() {
           </div>
         </div>
         <LoginButton />
+
+        <Link
+            href="/"
+            className="flex items-center gap-5 mt-4 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <ArrowLeftIcon className="w-5 md:w-6" /><span>Home</span> 
+          </Link>
         <div className="flex h-8 items-end space-x-1">
           {/* Add form errors here */}
         </div>
